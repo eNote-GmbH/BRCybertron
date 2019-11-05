@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef NS_OPTIONS(long, CYParsingOptions) {
 	CYParsingDefaultOptions		= 0,
-	CYParsingAsHTML             = 1 << 32,
+	CYParsingAsHTML             = 1,
 };
 
 /**
