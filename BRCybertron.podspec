@@ -1,20 +1,20 @@
 Pod::Spec.new do |s|
 
   s.name         = "BRCybertron"
-  s.version      = "1.1.1"
+  s.version      = "1.2.0"
   s.summary      = "Objective-C XSLT processor."
   s.description  = <<-DESC
                    This project provides a simple way to run XSLT 1.0 transformations on XML
 				   documents in Objective-C.
                    DESC
 
-  s.homepage     = "https://github.com/Blue-Rocket/BRCybertron"
+  s.homepage     = "https://github.com/eNote-GmbH/BRCybertron.git"
   s.license      = "MIT"
   s.author       = { "Matt Magoffin" => "matt@bluerocket.us" }
 
   s.ios.deployment_target = "7.1"
 
-  s.source       = { :git => "https://github.com/Blue-Rocket/BRCybertron.git",
+  s.source       = { :git => "https://github.com/eNote-GmbH/BRCybertron.git",
   					 :tag => s.version.to_s, :submodules => true }
 
   s.libraries	 = 'xml2'
@@ -26,8 +26,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'libxslt' do |as|
 	as.xcconfig = {
-		'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Private/BRCybertron/BRCybertron/libxslt" ' +
-								'"${PODS_ROOT}/Headers/Private/BRCybertron/libxslt"'
+		'HEADER_SEARCH_PATHS' => ['"${PODS_ROOT}/BRCybertron/BRCybertron/libxslt"', '"${PODS_ROOT}/BRCybertron/libxslt"']
 	}
 	as.header_mappings_dir = '.'
   	as.requires_arc = false
